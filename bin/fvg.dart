@@ -4,7 +4,7 @@ import 'dart:html';
 import 'dart:math';
 
 part 'v2.dart';
-part 'Particles.dart';
+//part 'Particles.dart';
 
 double fpsAverage;
 /**
@@ -22,7 +22,7 @@ class Main {
   num _width;
   num _height;
   num renderTime;
-  Particles particles;
+ // Particles particles;
 
   Main(this.canvas) {
   }
@@ -32,7 +32,8 @@ class Main {
     final h = 1 / 1500.0;
     final g = 1 / 72.0;
     context = canvas.context2d;
-    particles = new Particles(context, count);
+   // particles = new Particles(context, count);
+
     // Start the animation loop.
     requestRedraw();
   }
@@ -43,8 +44,8 @@ class Main {
       showFps((1000 / (time - renderTime)).round());
     }
     renderTime = time;
-    particles.draw();
     drawBackground();
+   // particles.draw();
     requestRedraw();
   }
 
