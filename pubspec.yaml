@@ -1,5 +1,7 @@
 name: fvg
+author: GDur
 description: A sample command-line application
+homepage: http://www.fusiondog.net/
 
 #dependencies:
 #  unittest: any

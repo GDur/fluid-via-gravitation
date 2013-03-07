@@ -4,7 +4,7 @@ import 'dart:html';
 import 'dart:math';
 
 part 'v2.dart';
-//part 'Particles.dart';
+part 'Particles.dart';
 
 double fpsAverage;
 /**
@@ -12,17 +12,19 @@ double fpsAverage;
  */
 void main() {
   var system = new Main(query("#container"));
+
+
   system.start();
 }
 
 class Main {
   CanvasElement canvas;
-  final num count = 34;
+  final num count = 20;
   CanvasRenderingContext2D context;
   num _width;
   num _height;
   num renderTime;
- // Particles particles;
+  Particles particles;
 
   Main(this.canvas) {
   }
@@ -32,7 +34,7 @@ class Main {
     final h = 1 / 1500.0;
     final g = 1 / 72.0;
     context = canvas.context2d;
-   // particles = new Particles(context, count);
+    particles = new Particles(context, count);
 
     // Start the animation loop.
     requestRedraw();
@@ -45,11 +47,13 @@ class Main {
     }
     renderTime = time;
     drawBackground();
-   // particles.draw();
+    particles.draw();
     requestRedraw();
   }
 
   void drawBackground() {
+    //context.fillStyle = "rgba(255, 255, 255, 0.05)";
+    //context.fillRect (0, 0, width, height);
     context.clearRect(0, 0, width, height);
   }
 

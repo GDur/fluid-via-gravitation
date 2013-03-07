@@ -16,7 +16,13 @@
     <p>A solar system visualization using requestAnimationFrame.</p>
 
     <div>
-      <canvas id="container" width="500px" height="400px"></canvas>
+      <canvas id="container" width="500px" height="500px"></canvas>
+      <form class="center">
+        <input id="GSlider" type="range" max="500"            value="100"/>
+        <input id="repulsionSlider" type="range" max="1000"   value="500"/>
+        <input id="radiusSlider" type="range" max="5000"      value="500"/>
+        <input id="attractionSlider" type="range" max="1000"  value="10"/>
+      </form>
     </div>
 
     <footer>
